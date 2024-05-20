@@ -9,7 +9,7 @@ template.innerHTML = `
     <p>0</p>
   <button aria-label="increment">+</button>
 `
-class XCounter extends HTMLElement {
+export class XCounter extends HTMLElement {
   set value(value) {
     this._value = value;
     this.valueElement.innerText = this._value;

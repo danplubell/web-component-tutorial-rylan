@@ -1,0 +1,12 @@
+// x-counter.d.ts
+
+declare module 'x-counter' {
+  interface XCounter extends HTMLElement {
+    // Add properties and methods specific to your x-counter component
+    // For example:
+    // count: number;
+    // increment(): void;
+  }
+  
+  export default XCounter;
+}
