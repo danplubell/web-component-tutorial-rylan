@@ -24,7 +24,7 @@ class XCounter extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     
     this.valueElement = this.shadowRoot.querySelector('p');
-    ;
+    
     this.incrementButton= this.shadowRoot.querySelectorAll('button')[1];
     this.decrementButton= this.shadowRoot.querySelectorAll('button')[0];
     this.incrementButton.addEventListener('click', ()=>this.value++);
