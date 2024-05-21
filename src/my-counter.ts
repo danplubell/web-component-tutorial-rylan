@@ -5,6 +5,8 @@ class MyCounter extends HTMLElement {
   private countElement: HTMLElement;
   private incrementButton: HTMLButtonElement;
   private decrementButton: HTMLButtonElement;
+  public onIncrement: (count: number) => void = () => {};
+  public onDecrement: (count: number) => void = () => {};
   
   constructor() {
     super();
@@ -65,12 +67,14 @@ class MyCounter extends HTMLElement {
     this.count++;
     this.updateDisplay();
     this.dispatchEvent(new CustomEvent('increment', { detail: { count: this.count } }));
+    this.onIncrement(this.count);
   }
   
   decrement() {
     this.count--;
     this.updateDisplay();
     this.dispatchEvent(new CustomEvent('decrement', { detail: { count: this.count } }));
+    this.onDecrement(this.count);
   }
   
   updateDisplay() {
@@ -82,7 +86,7 @@ class MyCounter extends HTMLElement {
   }
   
   attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-    if (name === 'start' && oldValue !== newValue) {
+    if (name === 'start' && newValue !== oldValue) {
       this.count = parseInt(newValue, 10);
       this.updateDisplay();
     }
