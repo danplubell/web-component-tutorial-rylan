@@ -1,6 +1,6 @@
 import './hello-world';
 import './xcounter/xcounter.ts';
-import MyCounterComponent from "./MyCounterComponent.tsx";
+import MyCounterComponent from "./my-counter/MyCounterComponent.tsx";
 function App() {
   const handleIncrement = (count: number) => {
     console.log('Incremented to:', count);
