@@ -5,11 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!---<script type="module" src="/src/main.tsx"></script>--->
     <script type="module" src="/src/user-card/user-card.js"></script>
-    <user-card></user-card>
+    <h3>Hello World</h3>
+    <user-card name="John Doe" avatar="https://randomuser.me/api/portraits/men/1.jpg">
+      <div slot="email">johndoe@somewhere.com</div>
+      <div slot="phone">+1 (555) 555-2323</div>
+    </user-card>
+    <user-card name="Jane Doe" avatar="https://randomuser.me/api/portraits/women/1.jpg">
+      <div slot="email">janedoe@somewhere.com</div>
+      <div slot="phone">+1 (555) 555-2323</div>
+    </user-card>
   </body>
 </html>
