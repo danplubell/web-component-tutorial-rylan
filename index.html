@@ -5,13 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
-    
+    <script defer src="/src/toot-embeded/toot-embed-element.js"></script>
   </head>
   <body>
     <div id="root"></div>
     <!---<script type="module" src="/src/main.tsx"></script>--->
-    <script type="module" src="/src/user-card/user-card.js"></script>
-    <h3>Hello World</h3>
+    
+    <!---<script type="module" src="/src/user-card/user-card.js"></script>
     <user-card name="John Doe" avatar="https://randomuser.me/api/portraits/men/1.jpg">
       <div slot="email">johndoe@somewhere.com</div>
       <div slot="phone">+1 (555) 555-2323</div>
@@ -20,5 +20,10 @@
       <div slot="email">janedoe@somewhere.com</div>
       <div slot="phone">+1 (555) 555-2323</div>
     </user-card>
+    --->
+    <p>Here's a example toot:</p>
+    <p>
+      <toot-embed src="https://fosstodon.org/api/v1/statuses/109660552894549193"></toot-embed>
+    </p>
   </body>
 </html>
